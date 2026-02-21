@@ -7,6 +7,7 @@ export const UI = {
     previous: 'Previous',
     next: 'Next',
     noCard: 'Generate a card to start.',
+    noMore: 'No new cards left for this difficulty.',
     difficultyLabel: 'Difficulty',
     difficulties: {
       easy: 'Easy',
@@ -27,6 +28,7 @@ export const UI = {
     previous: 'Anterior',
     next: 'Siguiente',
     noCard: 'Genera una carta para empezar.',
+    noMore: 'No quedan cartas nuevas para esta dificultad.',
     difficultyLabel: 'Dificultad',
     difficulties: {
       easy: 'Fácil',

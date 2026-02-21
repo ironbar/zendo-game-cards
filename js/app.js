@@ -1,14 +1,22 @@
-import { cards, resolveCard, renderRuleHtml } from '../data/cards.js';
+import { cards, resolveCard, renderRuleHtml, createSignature, countCardCombinations } from '../data/cards.js';
 import { difficultyLabels } from '../data/options.js';
 import { UI, getLang, setLang } from './i18n.js';
 
 const cardsById = new Map(cards.map((card) => [card.id, card]));
+const cardCombinationCounts = new Map(cards.map((card) => [card.id, countCardCombinations(card)]));
+const difficultyCombinationCounts = cards.reduce((acc, card) => {
+  acc.set(card.difficulty, (acc.get(card.difficulty) || 0) + cardCombinationCounts.get(card.id));
+  return acc;
+}, new Map());
 
 const state = {
   lang: getLang(),
   difficulty: 'easy',
   history: [],
   index: -1,
+  usedSignatures: new Set(),
+  usedByDifficulty: new Map(),
+  usedByCard: new Map(),
 };
 
 const pageTitle = document.getElementById('page-title');
@@ -56,6 +64,13 @@ const renderEmptyState = () => {
   nextButton.disabled = true;
 };
 
+const renderNoMoreState = () => {
+  cardSlot.innerHTML = `<div class="card"><div class="card-rule">${UI[state.lang].noMore}</div></div>`;
+  historyMeta.textContent = '';
+  prevButton.disabled = state.index <= 0;
+  nextButton.disabled = state.index >= state.history.length - 1;
+};
+
 const renderCard = () => {
   if (state.index < 0 || state.index >= state.history.length) {
     renderEmptyState();
@@ -91,10 +106,43 @@ const renderCard = () => {
 };
 
 const generateCard = () => {
-  const filtered = cards.filter((card) => card.difficulty === state.difficulty);
-  const card = filtered[Math.floor(Math.random() * filtered.length)];
-  const resolved = resolveCard(card);
+  const totalCombos = difficultyCombinationCounts.get(state.difficulty) || 0;
+  const usedCombos = state.usedByDifficulty.get(state.difficulty) || 0;
+  if (usedCombos >= totalCombos && totalCombos > 0) {
+    renderNoMoreState();
+    return;
+  }
 
+  const filtered = cards.filter((card) => card.difficulty === state.difficulty);
+  const available = filtered.filter((card) => {
+    const used = state.usedByCard.get(card.id) || 0;
+    return used < cardCombinationCounts.get(card.id);
+  });
+
+  if (available.length === 0) {
+    renderNoMoreState();
+    return;
+  }
+
+  let resolved = null;
+  let card = null;
+  let signature = '';
+
+  while (true) {
+    card = available[Math.floor(Math.random() * available.length)];
+    resolved = resolveCard(card);
+    signature = createSignature(card.id, resolved.selections);
+    if (!state.usedSignatures.has(signature)) {
+      break;
+    }
+  }
+
+  state.usedSignatures.add(signature);
+  state.usedByDifficulty.set(
+    card.difficulty,
+    (state.usedByDifficulty.get(card.difficulty) || 0) + 1,
+  );
+  state.usedByCard.set(card.id, (state.usedByCard.get(card.id) || 0) + 1);
   state.history.push(resolved);
   state.index = state.history.length - 1;
   renderCard();

@@ -567,6 +567,53 @@ export const resolveCard = (card, rng = Math.random) => {
   };
 };
 
+export const createSignature = (cardId, selections) => {
+  const keys = Object.keys(selections).sort();
+  const payload = keys.map((key) => `${key}:${selections[key]}`).join('|');
+  return `${cardId}|${payload}`;
+};
+
+export const countCardCombinations = (card) => {
+  const choiceMap = new Map(card.choices.map((choice) => [choice.key, choice]));
+  const handled = new Set();
+  let total = 1;
+
+  if (card.pairings) {
+    for (const pairing of card.pairings) {
+      const [leftKey, rightKey] = pairing.keys;
+      const leftChoice = choiceMap.get(leftKey);
+      const rightChoice = choiceMap.get(rightKey);
+      if (!leftChoice || !rightChoice) {
+        continue;
+      }
+
+      const leftPool = getPool(leftChoice.pool);
+      const rightPool = getPool(rightChoice.pool);
+      const leftCount = leftPool.length;
+      const rightCount = rightPool.length;
+
+      if (!pairing.allowSame && leftChoice.pool === rightChoice.pool) {
+        total *= Math.max(leftCount * (leftCount - 1), 0);
+      } else {
+        total *= leftCount * rightCount;
+      }
+
+      handled.add(leftKey);
+      handled.add(rightKey);
+    }
+  }
+
+  for (const choice of card.choices) {
+    if (handled.has(choice.key)) {
+      continue;
+    }
+    const pool = getPool(choice.pool);
+    total *= pool.length;
+  }
+
+  return total;
+};
+
 const renderChoice = (choiceDef, selectionId, lang) => {
   const option = getOptionById(choiceDef.pool, selectionId);
   if (!option) {
