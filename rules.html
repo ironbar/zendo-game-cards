@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zendo Rules</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="brand">
+          <h1 id="rules-title">How to Play</h1>
+          <p id="rules-intro">Zendo is an inductive logic game.</p>
+        </div>
+        <nav>
+          <a href="index.html" id="home-link">Card Generator</a>
+          <div class="language-toggle" role="group" aria-label="Language">
+            <button type="button" data-lang="es">ES</button>
+            <button type="button" data-lang="en">EN</button>
+          </div>
+        </nav>
+      </header>
+
+      <section class="panel rules">
+        <h2 id="rules-heading">How to Play</h2>
+        <p id="rules-summary">Zendo is an inductive logic game.</p>
+        <ul id="rules-list"></ul>
+        <p class="footer-note" id="rules-outro"></p>
+      </section>
+    </main>
+
+    <script type="module" src="js/rules.js"></script>
+  </body>
+</html>

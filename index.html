@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zendo Rule Cards</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="brand">
+          <h1 id="page-title">Zendo Rule Cards</h1>
+          <p id="page-subtitle">Generate a random rule card and keep your history.</p>
+        </div>
+        <nav>
+          <a href="rules.html" id="rules-link">Rules</a>
+          <div class="language-toggle" role="group" aria-label="Language">
+            <button type="button" data-lang="es">ES</button>
+            <button type="button" data-lang="en">EN</button>
+          </div>
+        </nav>
+      </header>
+
+      <section class="panel">
+        <div class="controls">
+          <div>
+            <strong id="difficulty-label">Difficulty</strong>
+            <p id="difficulty-helper" class="card-meta">Pick a difficulty and generate a random card.</p>
+          </div>
+          <div class="difficulty-group" id="difficulty-group">
+            <button class="difficulty-button" data-difficulty="easy">Easy</button>
+            <button class="difficulty-button" data-difficulty="medium">Medium</button>
+            <button class="difficulty-button" data-difficulty="difficult">Difficult</button>
+          </div>
+          <button class="generate-button" id="generate-button">Generate card</button>
+        </div>
+
+        <div class="card-slot" id="card-slot"></div>
+
+        <div class="history-controls">
+          <button type="button" id="prev-button">Previous</button>
+          <button type="button" id="next-button">Next</button>
+          <span class="history-meta" id="history-meta"></span>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
