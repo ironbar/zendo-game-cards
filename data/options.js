@@ -13,24 +13,24 @@ export const pools = {
     { id: 'wedge', en: 'wedge', es: 'cuña', className: 'shape shape-wedge', decorate: true, tokenType: 'shape' },
   ],
   counts_1_2_atleast_1: [
-    { id: 'exactly-1', en: 'exactly 1', es: 'exactamente 1' },
-    { id: 'exactly-2', en: 'exactly 2', es: 'exactamente 2' },
-    { id: 'at-least-1', en: 'at least 1', es: 'al menos 1' },
+    { id: 'exactly-1', en: 'exactly 1', es: 'exactamente 1', decorate: true, className: 'count' },
+    { id: 'exactly-2', en: 'exactly 2', es: 'exactamente 2', decorate: true, className: 'count' },
+    { id: 'at-least-1', en: 'at least 1', es: 'al menos 1', decorate: true, className: 'count' },
   ],
   counts_1_2_3_4: [
-    { id: 'exactly-1', en: 'exactly 1', es: 'exactamente 1' },
-    { id: 'exactly-2', en: 'exactly 2', es: 'exactamente 2' },
-    { id: 'exactly-3', en: 'exactly 3', es: 'exactamente 3' },
-    { id: 'exactly-4', en: 'exactly 4', es: 'exactamente 4' },
+    { id: 'exactly-1', en: 'exactly 1', es: 'exactamente 1', decorate: true, className: 'count' },
+    { id: 'exactly-2', en: 'exactly 2', es: 'exactamente 2', decorate: true, className: 'count' },
+    { id: 'exactly-3', en: 'exactly 3', es: 'exactamente 3', decorate: true, className: 'count' },
+    { id: 'exactly-4', en: 'exactly 4', es: 'exactamente 4', decorate: true, className: 'count' },
   ],
   counts_2_3: [
-    { id: 'exactly-2', en: 'exactly 2', es: 'exactamente 2' },
-    { id: 'exactly-3', en: 'exactly 3', es: 'exactamente 3' },
+    { id: 'exactly-2', en: 'exactly 2', es: 'exactamente 2', decorate: true, className: 'count' },
+    { id: 'exactly-3', en: 'exactly 3', es: 'exactamente 3', decorate: true, className: 'count' },
   ],
   counts_atleast_1_exactly_1_exactly_2: [
-    { id: 'at-least-1', en: 'at least 1', es: 'al menos 1' },
-    { id: 'exactly-1', en: 'exactly 1', es: 'exactamente 1' },
-    { id: 'exactly-2', en: 'exactly 2', es: 'exactamente 2' },
+    { id: 'at-least-1', en: 'at least 1', es: 'al menos 1', decorate: true, className: 'count' },
+    { id: 'exactly-1', en: 'exactly 1', es: 'exactamente 1', decorate: true, className: 'count' },
+    { id: 'exactly-2', en: 'exactly 2', es: 'exactamente 2', decorate: true, className: 'count' },
   ],
   orientations_flat_vertical: [
     { id: 'flat', en: 'flat', es: 'horizontal', className: 'orientation', decorate: true },
@@ -60,9 +60,9 @@ export const pools = {
     { id: 'opposite', en: 'opposite', es: 'la dirección opuesta a la de' },
   ],
   count_rules: [
-    { id: 'odd', en: 'an odd number of', es: 'un número impar de' },
-    { id: 'even', en: 'an even number of', es: 'un número par de' },
-    { id: 'either-1-2', en: 'either 1 or 2', es: '1 o 2' },
+    { id: 'odd', en: 'an odd number of', es: 'un número impar de', decorate: true, className: 'count' },
+    { id: 'even', en: 'an even number of', es: 'un número par de', decorate: true, className: 'count' },
+    { id: 'either-1-2', en: 'either 1 or 2', es: '1 o 2', decorate: true, className: 'count' },
   ],
 };
 

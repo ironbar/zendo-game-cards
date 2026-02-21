@@ -511,6 +511,16 @@ const escapeHtml = (value) => value
   .replaceAll('"', '&quot;')
   .replaceAll("'", '&#039;');
 
+const renderTextWithNumbers = (value) => {
+  const parts = value.split(/(\d+)/);
+  return parts.map((part) => {
+    if (/^\d+$/.test(part)) {
+      return `<span class="token count">${part}</span>`;
+    }
+    return escapeHtml(part);
+  }).join('');
+};
+
 const getPool = (poolName) => pools[poolName] || [];
 
 const getOptionById = (poolName, optionId) => {
@@ -648,7 +658,7 @@ export const renderRuleHtml = (card, selections, lang) => {
 
   return segments.map((segment) => {
     if (segment.type === 'text') {
-      return escapeHtml(segment.value);
+      return renderTextWithNumbers(segment.value);
     }
 
     if (segment.type === 'choice') {
