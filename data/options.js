@@ -9,6 +9,9 @@ export const pools = {
     { id: 'block', en: 'block', es: 'bloque', className: 'shape shape-block', decorate: true, tokenType: 'shape' },
     { id: 'wedge', en: 'wedge', es: 'cuña', className: 'shape shape-wedge', decorate: true, tokenType: 'shape' },
   ],
+  wedge_only: [
+    { id: 'wedge', en: 'wedge', es: 'cuña', className: 'shape shape-wedge', decorate: true, tokenType: 'shape' },
+  ],
   counts_1_2_atleast_1: [
     { id: 'exactly-1', en: 'exactly 1', es: 'exactamente 1' },
     { id: 'exactly-2', en: 'exactly 2', es: 'exactamente 2' },

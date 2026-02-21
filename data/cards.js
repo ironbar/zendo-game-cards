@@ -86,11 +86,12 @@ export const cards = [
     id: 8,
     difficulty: 'easy',
     choices: [
+      { key: 'shape', pool: 'wedge_only' },
       { key: 'orientation', pool: 'orientations_doorstop_cheesecake' },
     ],
     template: {
-      en: [txt('A structure must contain at least one wedge in the '), choice('orientation'), txt(' orientation.')],
-      es: [txt('Una estructura debe contener al menos 1 pieza de tipo cuña en orientación '), choice('orientation'), txt('.')],
+      en: [txt('A structure must contain at least one '), choice('shape'), txt(' in the '), choice('orientation'), txt(' orientation.')],
+      es: [txt('Una estructura debe contener al menos 1 pieza de tipo '), choice('shape'), txt(' en orientación '), choice('orientation'), txt('.')],
     },
   },
   {
