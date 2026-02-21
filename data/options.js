@@ -30,7 +30,7 @@ export const pools = {
     { id: 'exactly-2', en: 'exactly 2', es: 'exactamente 2' },
   ],
   orientations_flat_vertical: [
-    { id: 'flat', en: 'flat', es: 'plano', className: 'orientation', decorate: true },
+    { id: 'flat', en: 'flat', es: 'plana', className: 'orientation', decorate: true },
     { id: 'vertical', en: 'vertical', es: 'vertical', className: 'orientation', decorate: true },
   ],
   orientations_doorstop_cheesecake: [
@@ -39,22 +39,22 @@ export const pools = {
   ],
   orientations_upside_weird: [
     { id: 'upside-down', en: 'upside-down', es: 'boca abajo', className: 'orientation', decorate: true },
-    { id: 'weird', en: 'weird', es: 'raro', className: 'orientation', decorate: true },
+    { id: 'weird', en: 'weird', es: 'extraña', className: 'orientation', decorate: true },
   ],
   touching_status: [
     { id: 'touching', en: 'touching', es: 'tocando' },
     { id: 'not-touching', en: 'not touching', es: 'sin tocar' },
   ],
   zero_attributes: [
-    { id: 'ungrounded', en: 'ungrounded', es: 'no apoyada' },
-    { id: 'weird', en: 'weird', es: 'raro' },
-    { id: 'flat', en: 'flat', es: 'plano' },
-    { id: 'vertical', en: 'vertical', es: 'vertical' },
+    { id: 'ungrounded', en: 'ungrounded', es: 'no apoyadas' },
+    { id: 'weird', en: 'weird', es: 'extrañas' },
+    { id: 'flat', en: 'flat', es: 'planas' },
+    { id: 'vertical', en: 'vertical', es: 'verticales' },
   ],
   direction_relations: [
-    { id: 'same', en: 'same', es: 'la misma dirección' },
-    { id: 'different', en: 'different', es: 'una dirección diferente' },
-    { id: 'opposite', en: 'opposite', es: 'la dirección opuesta' },
+    { id: 'same', en: 'same', es: 'la misma dirección que' },
+    { id: 'different', en: 'different', es: 'una dirección diferente a la de' },
+    { id: 'opposite', en: 'opposite', es: 'la dirección opuesta a la de' },
   ],
   count_rules: [
     { id: 'odd', en: 'an odd number of', es: 'un número impar de' },

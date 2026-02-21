@@ -31,7 +31,7 @@ export const cards = [
     ],
     template: {
       en: [txt('A structure must contain '), choice('count'), txt(' '), choice('color'), txt(' piece(s).')],
-      es: [txt('Una estructura debe contener '), choice('count'), txt(' '), choice('color'), txt(' pieza(s).')],
+      es: [txt('La cantidad de piezas de color '), choice('color'), txt(' debe ser '), choice('count'), txt('.')],
     },
   },
   {
@@ -43,7 +43,7 @@ export const cards = [
     ],
     template: {
       en: [txt('A structure must contain '), choice('count'), txt(' '), choice('shape'), txt(' piece(s).')],
-      es: [txt('Una estructura debe contener '), choice('count'), txt(' '), choice('shape'), txt(' pieza(s).')],
+      es: [txt('La cantidad de piezas de tipo '), choice('shape'), txt(' debe ser '), choice('count'), txt('.')],
     },
   },
   {
@@ -55,7 +55,7 @@ export const cards = [
     ],
     template: {
       en: [txt('A structure must contain at least one '), choice('color'), txt(' '), choice('shape'), txt('.')],
-      es: [txt('Una estructura debe contener al menos una '), choice('shape'), txt(' de color '), choice('color'), txt('.')],
+      es: [txt('Una estructura debe contener al menos 1 pieza de tipo '), choice('shape'), txt(' de color '), choice('color'), txt('.')],
     },
   },
   {
@@ -67,7 +67,7 @@ export const cards = [
     ],
     template: {
       en: [txt('A structure must contain at least one '), choice('orientation'), txt(' '), choice('shape'), txt('.')],
-      es: [txt('Una estructura debe contener al menos una pieza '), choice('shape'), txt(' en orientación '), choice('orientation'), txt('.')],
+      es: [txt('Una estructura debe contener al menos 1 pieza de tipo '), choice('shape'), txt(' en orientación '), choice('orientation'), txt('.')],
     },
   },
   {
@@ -79,7 +79,7 @@ export const cards = [
     ],
     template: {
       en: [txt('A structure must contain at least one '), choice('orientation'), txt(' '), choice('color'), txt(' piece.')],
-      es: [txt('Una estructura debe contener al menos una pieza de color '), choice('color'), txt(' en orientación '), choice('orientation'), txt('.')],
+      es: [txt('Una estructura debe contener al menos 1 pieza de color '), choice('color'), txt(' en orientación '), choice('orientation'), txt('.')],
     },
   },
   {
@@ -90,7 +90,7 @@ export const cards = [
     ],
     template: {
       en: [txt('A structure must contain at least one wedge in the '), choice('orientation'), txt(' orientation.')],
-      es: [txt('Una estructura debe contener al menos una cuña en la orientación '), choice('orientation'), txt('.')],
+      es: [txt('Una estructura debe contener al menos 1 pieza de tipo cuña en orientación '), choice('orientation'), txt('.')],
     },
   },
   {
@@ -101,7 +101,7 @@ export const cards = [
     ],
     template: {
       en: [txt('A structure must contain '), choice('count'), txt(' total pieces.')],
-      es: [txt('Una estructura debe contener '), choice('count'), txt(' piezas en total.')],
+      es: [txt('La cantidad total de piezas debe ser '), choice('count'), txt('.')],
     },
   },
   {
@@ -116,7 +116,7 @@ export const cards = [
     ],
     template: {
       en: [txt('A structure must contain at least one '), choice('colorA'), txt(' touching a '), choice('colorB'), txt('.')],
-      es: [txt('Una estructura debe contener al menos una pieza de color '), choice('colorA'), txt(' tocando una pieza de color '), choice('colorB'), txt('.')],
+      es: [txt('Una estructura debe contener al menos 1 pieza de color '), choice('colorA'), txt(' tocando 1 pieza de color '), choice('colorB'), txt('.')],
     },
   },
   {
@@ -127,7 +127,7 @@ export const cards = [
     ],
     template: {
       en: [txt('A structure must contain exclusively '), choice('shape'), txt('.')],
-      es: [txt('Una estructura debe contener exclusivamente '), choice('shape'), txt('.')],
+      es: [txt('Una estructura debe contener exclusivamente piezas de tipo '), choice('shape'), txt('.')],
     },
   },
   {
@@ -160,7 +160,7 @@ export const cards = [
     ],
     template: {
       en: [txt('A structure must contain at least one '), choice('shape'), txt(' piece of any kind inside another piece.')],
-      es: [txt('Una estructura debe contener al menos una pieza '), choice('shape'), txt(' dentro de otra pieza.')],
+      es: [txt('Una estructura debe contener al menos 1 pieza de tipo '), choice('shape'), txt(' dentro de otra pieza.')],
     },
   },
   {
@@ -182,7 +182,7 @@ export const cards = [
     ],
     template: {
       en: [txt('A structure must contain '), choice('count'), txt(' piece(s) pointing at another piece.')],
-      es: [txt('Una estructura debe contener '), choice('count'), txt(' pieza(s) apuntando a otra pieza.')],
+      es: [txt('La cantidad de piezas apuntando a otra pieza debe ser '), choice('count'), txt('.')],
     },
   },
   {
@@ -194,7 +194,7 @@ export const cards = [
     ],
     template: {
       en: [txt('A structure must contain at least one '), choice('orientation'), txt(' '), choice('shape'), txt('.')],
-      es: [txt('Una estructura debe contener al menos una pieza '), choice('shape'), txt(' en orientación '), choice('orientation'), txt('.')],
+      es: [txt('Una estructura debe contener al menos 1 pieza de tipo '), choice('shape'), txt(' en orientación '), choice('orientation'), txt('.')],
     },
   },
   {
@@ -209,7 +209,7 @@ export const cards = [
     ],
     template: {
       en: [txt('A structure must contain at least one '), choice('shapeA'), txt(' on top of a '), choice('shapeB'), txt('.')],
-      es: [txt('Una estructura debe contener al menos una '), choice('shapeA'), txt(' encima de una '), choice('shapeB'), txt('.')],
+      es: [txt('Una estructura debe contener al menos 1 pieza de tipo '), choice('shapeA'), txt(' encima de 1 pieza de tipo '), choice('shapeB'), txt('.')],
     },
   },
   {
@@ -220,7 +220,7 @@ export const cards = [
     ],
     template: {
       en: [txt('A structure must contain '), choice('count'), txt(' ungrounded piece(s).')],
-      es: [txt('Una estructura debe contener '), choice('count'), txt(' pieza(s) no apoyada(s).')],
+      es: [txt('La cantidad de piezas no apoyadas debe ser '), choice('count'), txt('.')],
     },
   },
   {
@@ -246,7 +246,7 @@ export const cards = [
     ],
     template: {
       en: [txt('A structure must contain at least one '), choice('colorA'), txt(' and at least one '), choice('colorB'), txt('.')],
-      es: [txt('Una estructura debe contener al menos una pieza de color '), choice('colorA'), txt(' y al menos una pieza de color '), choice('colorB'), txt('.')],
+      es: [txt('Una estructura debe contener al menos 1 pieza de color '), choice('colorA'), txt(' y al menos 1 pieza de color '), choice('colorB'), txt('.')],
     },
   },
   {
@@ -261,7 +261,7 @@ export const cards = [
     ],
     template: {
       en: [txt('A structure must contain at least one '), choice('shapeA'), txt(' pointing at a '), choice('shapeB'), txt('.')],
-      es: [txt('Una estructura debe contener al menos una '), choice('shapeA'), txt(' apuntando a una '), choice('shapeB'), txt('.')],
+      es: [txt('Una estructura debe contener al menos 1 pieza de tipo '), choice('shapeA'), txt(' apuntando a 1 pieza de tipo '), choice('shapeB'), txt('.')],
     },
   },
   {
@@ -273,7 +273,7 @@ export const cards = [
     ],
     template: {
       en: [txt('A structure must contain at least one '), choice('shape'), txt(' and at least one '), choice('color'), txt('.')],
-      es: [txt('Una estructura debe contener al menos una '), choice('shape'), txt(' y al menos una pieza de color '), choice('color'), txt('.')],
+      es: [txt('Una estructura debe contener al menos 1 pieza de tipo '), choice('shape'), txt(' y al menos 1 pieza de color '), choice('color'), txt('.')],
     },
   },
   {
@@ -285,7 +285,7 @@ export const cards = [
     ],
     template: {
       en: [txt('A structure must contain at least one '), choice('orientation'), txt(' '), choice('color'), txt(' piece.')],
-      es: [txt('Una estructura debe contener al menos una pieza de color '), choice('color'), txt(' en orientación '), choice('orientation'), txt('.')],
+      es: [txt('Una estructura debe contener al menos 1 pieza de color '), choice('color'), txt(' en orientación '), choice('orientation'), txt('.')],
     },
   },
   {
@@ -308,7 +308,7 @@ export const cards = [
     ],
     template: {
       en: [txt('A structure must contain zero '), choice('color'), txt(' '), choice('shape'), txt('.')],
-      es: [txt('Una estructura debe contener cero piezas '), choice('shape'), txt(' de color '), choice('color'), txt('.')],
+      es: [txt('Una estructura debe contener cero piezas de tipo '), choice('shape'), txt(' de color '), choice('color'), txt('.')],
     },
   },
   {
@@ -319,7 +319,7 @@ export const cards = [
     ],
     template: {
       en: [txt('A structure must contain exactly two pieces, with each piece pointing in the '), choice('relation'), txt(' direction as the other piece.')],
-      es: [txt('Una estructura debe contener exactamente dos piezas, cada una apuntando en '), choice('relation'), txt(' que la otra pieza.')],
+      es: [txt('Una estructura debe contener exactamente dos piezas, cada una apuntando en '), choice('relation'), txt(' la otra pieza.')],
     },
   },
   {
@@ -334,7 +334,7 @@ export const cards = [
     ],
     template: {
       en: [txt('A structure must contain at least one '), choice('shapeA'), txt(' and at least one '), choice('shapeB'), txt('.')],
-      es: [txt('Una estructura debe contener al menos una '), choice('shapeA'), txt(' y al menos una '), choice('shapeB'), txt('.')],
+      es: [txt('Una estructura debe contener al menos 1 pieza de tipo '), choice('shapeA'), txt(' y al menos 1 pieza de tipo '), choice('shapeB'), txt('.')],
     },
   },
   {
@@ -349,7 +349,7 @@ export const cards = [
     ],
     template: {
       en: [txt('A structure must contain at least one '), choice('colorA'), txt(' on top of a '), choice('colorB'), txt('.')],
-      es: [txt('Una estructura debe contener al menos una pieza de color '), choice('colorA'), txt(' encima de una pieza de color '), choice('colorB'), txt('.')],
+      es: [txt('Una estructura debe contener al menos 1 pieza de color '), choice('colorA'), txt(' encima de 1 pieza de color '), choice('colorB'), txt('.')],
     },
   },
   {
@@ -364,7 +364,7 @@ export const cards = [
     ],
     template: {
       en: [txt('A structure must contain at least one '), choice('colorA'), txt(' pointing at a '), choice('colorB'), txt('.')],
-      es: [txt('Una estructura debe contener al menos una pieza de color '), choice('colorA'), txt(' apuntando a una pieza de color '), choice('colorB'), txt('.')],
+      es: [txt('Una estructura debe contener al menos 1 pieza de color '), choice('colorA'), txt(' apuntando a 1 pieza de color '), choice('colorB'), txt('.')],
     },
   },
   {
@@ -379,7 +379,7 @@ export const cards = [
     ],
     template: {
       en: [txt('A structure must contain at least one '), choice('shapeA'), txt(' touching a '), choice('shapeB'), txt('.')],
-      es: [txt('Una estructura debe contener al menos una '), choice('shapeA'), txt(' tocando a una '), choice('shapeB'), txt('.')],
+      es: [txt('Una estructura debe contener al menos 1 pieza de tipo '), choice('shapeA'), txt(' tocando a 1 pieza de tipo '), choice('shapeB'), txt('.')],
     },
   },
   {
@@ -391,7 +391,7 @@ export const cards = [
     ],
     template: {
       en: [txt('A structure must contain at least one ungrounded '), choice('color'), txt(' '), choice('shape'), txt('.')],
-      es: [txt('Una estructura debe contener al menos una pieza '), choice('shape'), txt(' no apoyada de color '), choice('color'), txt('.')],
+      es: [txt('Una estructura debe contener al menos 1 pieza de tipo '), choice('shape'), txt(' no apoyada y de color '), choice('color'), txt('.')],
     },
   },
   {
@@ -406,7 +406,7 @@ export const cards = [
     ],
     template: {
       en: [txt('A structure must contain more '), choice('shapeA'), txt(' than '), choice('shapeB'), txt('.')],
-      es: [txt('Una estructura debe contener más '), choice('shapeA'), txt(' que '), choice('shapeB'), txt('.')],
+      es: [txt('Una estructura debe contener más piezas de tipo '), choice('shapeA'), txt(' que piezas de tipo '), choice('shapeB'), txt('.')],
     },
   },
   {
@@ -444,7 +444,7 @@ export const cards = [
     ],
     template: {
       en: [txt('A structure must contain at least one '), choice('shape'), txt(' OR at least one '), choice('color'), txt(' OR both.')],
-      es: [txt('Una estructura debe contener al menos una '), choice('shape'), txt(' O al menos una pieza de color '), choice('color'), txt(' O ambas.')],
+      es: [txt('Una estructura debe contener al menos 1 pieza de tipo '), choice('shape'), txt(' O al menos 1 pieza de color '), choice('color'), txt(' O ambas.')],
     },
   },
   {
@@ -459,7 +459,7 @@ export const cards = [
     ],
     template: {
       en: [txt('A structure must contain at least one '), choice('colorA'), txt(' with zero '), choice('colorB'), txt('.')],
-      es: [txt('Una estructura debe contener al menos una pieza de color '), choice('colorA'), txt(' con cero piezas de color '), choice('colorB'), txt('.')],
+      es: [txt('Una estructura debe contener al menos 1 pieza de color '), choice('colorA'), txt(' con cero piezas de color '), choice('colorB'), txt('.')],
     },
   },
   {
@@ -474,7 +474,7 @@ export const cards = [
     ],
     template: {
       en: [txt('A structure must contain at least one '), choice('shapeA'), txt(' with zero '), choice('shapeB'), txt('.')],
-      es: [txt('Una estructura debe contener al menos una '), choice('shapeA'), txt(' con cero '), choice('shapeB'), txt('.')],
+      es: [txt('Una estructura debe contener al menos 1 pieza de tipo '), choice('shapeA'), txt(' con cero piezas de tipo '), choice('shapeB'), txt('.')],
     },
   },
   {
@@ -486,7 +486,7 @@ export const cards = [
     ],
     template: {
       en: [txt('A structure must contain at least one '), choice('shape'), txt(' on top of a '), choice('color'), txt('.')],
-      es: [txt('Una estructura debe contener al menos una '), choice('shape'), txt(' encima de una pieza de color '), choice('color'), txt('.')],
+      es: [txt('Una estructura debe contener al menos 1 pieza de tipo '), choice('shape'), txt(' encima de 1 pieza de color '), choice('color'), txt('.')],
     },
   },
   {
@@ -498,7 +498,7 @@ export const cards = [
     ],
     template: {
       en: [txt('A structure must contain more '), choice('color'), txt(' pieces than '), choice('shape'), txt('.')],
-      es: [txt('Una estructura debe contener más piezas de color '), choice('color'), txt(' que '), choice('shape'), txt('.')],
+      es: [txt('Una estructura debe contener más piezas de color '), choice('color'), txt(' que piezas de tipo '), choice('shape'), txt('.')],
     },
   },
 ];
