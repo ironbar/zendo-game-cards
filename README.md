@@ -14,3 +14,9 @@ Create a simple website (smartphone friendly) that can be used to generate Zendo
 ## Motivation
 
 Zendo is no longer available for sell. Neither there is an spanish version. This website could be useful for Zendo owners which cards are damaged or that want to play with spanish people.
+
+## Local run
+
+```bash
+python3 -m http.server 8000
+```
