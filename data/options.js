@@ -30,12 +30,12 @@ export const pools = {
     { id: 'exactly-2', en: 'exactly 2', es: 'exactamente 2' },
   ],
   orientations_flat_vertical: [
-    { id: 'flat', en: 'flat', es: 'plana', className: 'orientation', decorate: true },
+    { id: 'flat', en: 'flat', es: 'horizontal', className: 'orientation', decorate: true },
     { id: 'vertical', en: 'vertical', es: 'vertical', className: 'orientation', decorate: true },
   ],
   orientations_doorstop_cheesecake: [
-    { id: 'doorstop', en: 'doorstop', es: 'doorstop', className: 'orientation', decorate: true },
-    { id: 'cheesecake', en: 'cheesecake', es: 'cheesecake', className: 'orientation', decorate: true },
+    { id: 'doorstop', en: 'doorstop', es: 'cuña de puerta', className: 'orientation', decorate: true },
+    { id: 'cheesecake', en: 'cheesecake', es: 'trozo de tarta', className: 'orientation', decorate: true },
   ],
   orientations_upside_weird: [
     { id: 'upside-down', en: 'upside-down', es: 'boca abajo', className: 'orientation', decorate: true },
