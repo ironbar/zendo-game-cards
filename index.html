@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zendo Rule Cards</title>
+    <title>Generador de cartas de Zendo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,28 +16,26 @@
     <main>
       <header>
         <div class="brand">
-          <h1 id="page-title">Zendo Rule Cards</h1>
-          <p id="page-subtitle">Generate a random rule card and keep your history.</p>
+          <h1 id="page-title">Generador de cartas de Zendo</h1>
         </div>
         <nav>
           <a href="rules.html" id="rules-link">Rules</a>
           <div class="language-toggle" role="group" aria-label="Language">
-            <button type="button" data-lang="es">ES</button>
-            <button type="button" data-lang="en">EN</button>
+            <button type="button" data-lang="es">ES 🇪🇸</button>
+            <button type="button" data-lang="en">EN 🇬🇧</button>
           </div>
         </nav>
       </header>
 
       <section class="panel">
         <div class="controls">
-          <div>
-            <strong id="difficulty-label">Difficulty</strong>
-            <p id="difficulty-helper" class="card-meta">Pick a difficulty and generate a random card.</p>
-          </div>
-          <div class="difficulty-group" id="difficulty-group">
-            <button class="difficulty-button" data-difficulty="easy">Easy</button>
-            <button class="difficulty-button" data-difficulty="medium">Medium</button>
-            <button class="difficulty-button" data-difficulty="difficult">Difficult</button>
+          <div class="difficulty-row">
+            <strong id="difficulty-label">Dificultad</strong>
+            <div class="difficulty-group" id="difficulty-group">
+              <button class="difficulty-button" data-difficulty="easy">Easy</button>
+              <button class="difficulty-button" data-difficulty="medium">Medium</button>
+              <button class="difficulty-button" data-difficulty="difficult">Difficult</button>
+            </div>
           </div>
           <button class="generate-button" id="generate-button">Generate card</button>
         </div>

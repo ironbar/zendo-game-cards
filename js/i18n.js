@@ -1,7 +1,6 @@
 export const UI = {
   en: {
-    title: 'Zendo Rule Cards',
-    subtitle: 'Generate a random rule card and keep your history.',
+    title: 'Zendo Card Generator',
     generate: 'Generate card',
     history: 'History',
     previous: 'Previous',
@@ -14,15 +13,13 @@ export const UI = {
       medium: 'Medium',
       difficult: 'Difficult',
     },
-    difficultyHelper: 'Pick a difficulty and generate a random card.',
     rulesLink: 'Rules',
     homeLink: 'Card Generator',
     languageLabel: 'Language',
     historyCounter: (current, total) => `${current} of ${total}`,
   },
   es: {
-    title: 'Cartas de reglas Zendo',
-    subtitle: 'Genera una regla aleatoria y guarda el historial.',
+    title: 'Generador de cartas de Zendo',
     generate: 'Generar carta',
     history: 'Historial',
     previous: 'Anterior',
@@ -35,7 +32,6 @@ export const UI = {
       medium: 'Medio',
       difficult: 'Difícil',
     },
-    difficultyHelper: 'Elige una dificultad y genera una carta al azar.',
     rulesLink: 'Reglas',
     homeLink: 'Generador',
     languageLabel: 'Idioma',

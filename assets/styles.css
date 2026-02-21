@@ -120,6 +120,17 @@ nav a:focus {
   gap: 16px;
 }
 
+.difficulty-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+.difficulty-row strong {
+  min-width: 110px;
+}
+
 .difficulty-group {
   display: flex;
   flex-wrap: wrap;

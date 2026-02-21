@@ -20,10 +20,8 @@ const state = {
 };
 
 const pageTitle = document.getElementById('page-title');
-const pageSubtitle = document.getElementById('page-subtitle');
 const rulesLink = document.getElementById('rules-link');
 const difficultyLabel = document.getElementById('difficulty-label');
-const difficultyHelper = document.getElementById('difficulty-helper');
 const generateButton = document.getElementById('generate-button');
 const cardSlot = document.getElementById('card-slot');
 const prevButton = document.getElementById('prev-button');
@@ -48,10 +46,8 @@ const updateDifficultyButtons = () => {
 const updateStaticText = () => {
   const labels = UI[state.lang];
   pageTitle.textContent = labels.title;
-  pageSubtitle.textContent = labels.subtitle;
   rulesLink.textContent = labels.rulesLink;
   difficultyLabel.textContent = labels.difficultyLabel;
-  difficultyHelper.textContent = labels.difficultyHelper;
   generateButton.textContent = labels.generate;
   prevButton.textContent = labels.previous;
   nextButton.textContent = labels.next;
