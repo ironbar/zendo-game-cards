@@ -1,5 +1,6 @@
 
-- Improve translations
-    - Una estructura debe contener al menos una cuña en la orientación doorstop. -> TODO
-    - Una estructura debe contener al menos una cuña en la orientación cheesecake. ->
-- Add link to pdf rules
+- Understand this concepts
+    - Weird orientation
+    - ungrounded
+- Simplificar la web, no me gusta el titulo y subtitulo. Hay demasiadas explicaciones cuando deberia ser muy simple.
+- El resumen no esta muy bien hecho

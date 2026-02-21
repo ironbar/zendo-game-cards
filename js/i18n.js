@@ -58,6 +58,7 @@ export const RULES = {
       'If needed, the Moderator can move structures or break them down to free pieces.',
     ],
     outro: 'The first player whose rule cannot be disproved by the Moderator wins.',
+    pdfLink: 'Zendo Rules Book 1 (PDF)',
   },
   es: {
     title: 'Cómo jugar (resumen del libro 1)',
@@ -73,6 +74,7 @@ export const RULES = {
       'Si hace falta, el Moderador puede mover estructuras o desmontarlas para liberar piezas.',
     ],
     outro: 'Gana el primer jugador cuya regla no pueda ser refutada por el Moderador.',
+    pdfLink: 'Libro de reglas Zendo 1 (PDF)',
   },
 };
 

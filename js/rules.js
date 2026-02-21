@@ -10,6 +10,7 @@ const rulesIntro = document.getElementById('rules-intro');
 const rulesSummary = document.getElementById('rules-summary');
 const rulesList = document.getElementById('rules-list');
 const rulesOutro = document.getElementById('rules-outro');
+const rulesPdfLink = document.getElementById('rules-pdf-link');
 const homeLink = document.getElementById('home-link');
 const languageToggle = document.querySelector('.language-toggle');
 
@@ -28,6 +29,7 @@ const renderRules = () => {
   rulesIntro.textContent = content.intro;
   rulesSummary.textContent = content.intro;
   rulesOutro.textContent = content.outro;
+  rulesPdfLink.textContent = content.pdfLink;
   homeLink.textContent = labels.homeLink;
 
   rulesList.innerHTML = '';
